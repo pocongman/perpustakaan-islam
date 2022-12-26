@@ -1,0 +1,44 @@
+{% extends 'front/base.html' %}
+
+{% load static %}
+
+{% block content %}
+ <div class="choose ">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-8">
+             <div class="titlepage">
+                <h2>Profil Kreator</h2>
+             </div>
+          </div>
+       </div>
+    </div>
+    <div class="container-fluid">
+       <div class="row d_flex">
+          <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
+             <div class="padding_with">
+                <div class="row">
+                   <div class="col-md-12 padding_bottom">
+                      <div class="choose_box">
+                         <div class="choose_text">
+                            <h3>Nama : Faldy Alfareza Pambudi</h3>
+                            <h3>NIM : 2011102441097 </h3>
+                            <h3>TTL : Wonosobo, 25 September 2001 </h3>
+                            <h3>E-Mail : faldyalvareza@gmail.com</h3><br>
+                            <p>Sebaik-baik manusia adalah yang terbaik budi pekertinya dan yang paling bermanfaat bagi manusia lainnya</p>
+                            <p>(HR. Ahmad)</p>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+             <div class="choose_img">
+                <figure><img src="{% static 'front/images/about.jpeg' %}" alt="#"/></figure>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+{% endblock content %}

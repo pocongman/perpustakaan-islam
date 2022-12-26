@@ -1,0 +1,4 @@
+git init ()
+git add . (menambahkan semua berkas ke dalam git)
+git commit -m "updates" 
+git branch -M master

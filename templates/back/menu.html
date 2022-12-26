@@ -1,0 +1,61 @@
+{% load static %}
+
+  <div class="sidebar-wrapper">
+    <div class="user">
+      <div class="photo">
+        <img src="{% static 'back/img/faces/about.jpg' %}" />
+      </div>
+      <div class="info">
+        <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+          <span>
+            {{user}}
+            <b class="caret"></b>
+          </span>
+        </a>
+        <div class="clearfix"></div>
+        <div class="collapse" id="collapseExample">
+          <ul class="nav">
+            <li>
+              <a href="#">
+                <span class="sidebar-mini-icon">MP</span>
+                <span class="sidebar-normal">My Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="sidebar-mini-icon">EP</span>
+                <span class="sidebar-normal">Edit Profile</span>
+              </a>
+            </li>
+            
+            <li>
+              <a href="{% url 'logout' %}">
+                <span class="sidebar-mini-icon">L</span>
+                <span class="sidebar-normal">Logout</span>
+              </a>
+            </li>
+           
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul class="nav">
+      <li>
+        <a href="{% url 'tabel_buku' %}">
+          <i class="nc-icon nc-box"></i>
+          <p>Tabel Buku</p>
+        </a>
+      </li>
+
+      {% if request.session.is_administrator == 'administrator' %}
+      <li>
+        <a href="{% url 'tabel_user' %}">
+          <i class="nc-icon nc-paper"></i>
+          <p>Tabel User</p>
+        </a>
+      </li>
+      {% endif %}
+
+    </ul>
+  </div>
+</div>

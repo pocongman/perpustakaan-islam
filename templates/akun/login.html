@@ -1,0 +1,92 @@
+{% extends 'front/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{title}}</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'akun/vendor/bootstrap/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'akun/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'akun/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'akun/vendor/animate/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'akun/vendor/css-hamburgers/hamburgers.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'akun/vendor/animsition/css/animsition.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'akun/vendor/select2/select2.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'akun/vendor/daterangepicker/daterangepicker.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'akun/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'akun/css/login.css' %}">
+
+	<link rel="stylesheet" href="{% static 'front/css/bootstrap.min.css' %}">
+	<!-- style css -->
+	<link rel="stylesheet" href="{% static 'front/css/perpus.css' %}">
+	<!-- Responsive-->
+	<link rel="stylesheet" href="{% static 'front/css/responsive.css' %}">
+	<!-- fevicon -->
+	<link rel="icon" href="{% static 'front/images/fevicon.png' %}" type="image/gif" />
+	<!-- Scrollbar Custom CSS -->
+	<link rel="stylesheet" href="{% static 'front/css/jquery.mCustomScrollbar.min.css' %}">
+	<!-- Tweaks for older IEs-->
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form-title" style="background-image: url({% static 'akun/images/shef.jpg' %});">
+					<span class="login100-form-title-1">
+						{{title}}
+					</span>
+				</div>
+
+				<form class="login100-form validate-form" method="POST">
+					{% csrf_token %}
+					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+						<span class="label-input100">Username</span>
+						<input class="input100" type="text" name="username" placeholder="Username">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+						<span class="label-input100">Password</span>
+						<input class="input100" type="password" name="password" placeholder="Password">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="container-login100-form-btn btn-square">
+						<button class="login100-form-btn btn-square" type="submit"> 
+							Login
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<script src="{% static 'akun/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+
+	<script src="{% static 'akun/vendor/animsition/js/animsition.min.js' %}"></script>
+
+	<script src="{% static 'akun/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'akun/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+	<script src="{% static 'akun/vendor/select2/select2.min.js' %}"></script>
+
+	<script src="{% static 'akun/vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'akun/vendor/daterangepicker/daterangepicker.js' %}"></script>
+
+	<script src="{% static 'akun/vendor/countdowntime/countdowntime.js' %}"></script>
+
+	<script src="{% static 'akun/js/main.js' %}"></script>
+
+</body>
+</html>
+{% endblock content %}

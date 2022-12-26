@@ -1,0 +1,70 @@
+{% extends 'back/base.html' %}
+
+{% block content %}
+
+<div class="content">
+    <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <a class="btn btn-sm btn-info" href="{% url 'tambah_buku' %}">Tambah Data</a>
+            <h4 class="card-title">{{title}}</h4>
+          </div>
+          <div class="card-body">
+            <div class="card-content table-bordered table-full-width">
+              <table class="table">
+                <thead class="text-dark">
+                    <td class="text-center">No</td>
+                    <td>Judul</td>
+                    <td>Penulis</td>
+                    <td>Publish</td>
+                    <td>Halaman</td>
+                    <td>Sumber</td>
+                    <td>Deskripsi</td>
+                    <!--<td style="width:12%">Opsi</td>-->
+                </thead>
+                <tbody>
+
+                    {% for a in data %}
+
+                  <tr>
+                    <td class="text-center">{{ forloop.counter }}</td>
+                    <td>{{a.info.title}}</td>
+                    <td>{{a.info.author}}</td>
+                    <td>{{a.info.publish}}</td>
+                    <td class="text-center">{{a.info.pages}}</td>
+                    <td>{{a.info.source}}</td>
+                    <td>{{a.info.desc}}</td>
+                    <!--<td>
+                      <a href="{% url 'lihat_buku' a.id %}" type="button" rel="tooltip" class="btn btn-success btn-icon btn-sm ">
+                        <i class="fa fa-eye"></i>
+                      </a>
+                      <a href="{% url 'edit_buku' a.id %}" type="button" rel="tooltip" class="btn btn-warning btn-icon btn-sm ">
+                        <i class="fa fa-edit"></i>
+                      </a>
+                      <a onclick="return confirm ('hapus buku?');"
+                         href="{% url 'hapus_buku' a.id %}" type="button" rel="tooltip" class="btn btn-danger btn-icon btn-sm ">
+                        <i class="fa fa-trash"></i>
+                      </a>
+                    </td>
+                    </td>-->
+                  </tr>
+
+                  {% endfor %}
+                  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  {% endblock content %}
+
+  {% block js %}
+  
+  {% endblock js %}
+

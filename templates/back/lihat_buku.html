@@ -1,0 +1,47 @@
+{% extends 'back/base.html' %}
+
+{% block content %}
+
+<div class="content">
+<div class="row">
+<div class="col-md-6">
+    <div class="card ">
+      <div class="card-header ">
+        <h4 class="card-title">Detail Data Buku</h4>
+      </div>
+      <div class="card-body ">
+        <form method="POST" action="#">
+            {% csrf_token %}
+          <label>Judul</label>
+          <div class="form-group">
+            {{buku.judul}}
+          </div>
+          <label>Kategori</label>
+          <div class="form-group">
+            {{buku.kategori}}
+          </div>
+          <label>Pengarang</label>
+          <div class="form-group">
+            {{buku.pengarang}}
+          </div>
+          <label>Penerbit</label>
+          <div class="form-group">
+            {{buku.penerbit}}
+          </div>
+          <label>Halaman</label>
+          <div class="form-group">
+            {{buku.halaman}}
+          </div>
+          <label>Tanggal</label>
+          <div class="form-group">
+            {{buku.date}}
+          </div>
+          <a class="btn btn-sm btn-warning" href="{% url 'tabel_buku' %}">Kembali</a>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock content %}
+
