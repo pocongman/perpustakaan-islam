@@ -20,9 +20,9 @@
                     <td>Penulis</td>
                     <td>Publish</td>
                     <td>Halaman</td>
-                    <td>Sumber</td>
                     <td>Deskripsi</td>
-                    <!--<td style="width:12%">Opsi</td>-->
+                    <td style="width:9%">Sumber</td>
+                    <td style="width:9%">Opsi</td>
                 </thead>
                 <tbody>
 
@@ -34,10 +34,10 @@
                     <td>{{a.info.author}}</td>
                     <td>{{a.info.publish}}</td>
                     <td class="text-center">{{a.info.pages}}</td>
-                    <td>{{a.info.source}}</td>
                     <td>{{a.info.desc}}</td>
-                    <!--<td>
-                      <a href="{% url 'lihat_buku' a.id %}" type="button" rel="tooltip" class="btn btn-success btn-icon btn-sm ">
+                    <td>{{a.info.source}}</td>
+                    <td>
+                      <!--<a href="{% url 'lihat_buku' a.id %}" type="button" rel="tooltip" class="btn btn-success btn-icon btn-sm ">
                         <i class="fa fa-eye"></i>
                       </a>-->
                       <a href="{% url 'edit_buku' a.id %}" type="button" rel="tooltip" class="btn btn-warning btn-icon btn-sm ">

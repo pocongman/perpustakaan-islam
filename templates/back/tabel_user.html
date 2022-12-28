@@ -8,7 +8,6 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-header">
-            <a class="btn btn-sm btn-info" href="{% url 'tambah_buku' %}">Tambah Data</a>
             <h4 class="card-title">{{title}}</h4>
           </div>
           <div class="card-body">
@@ -21,7 +20,7 @@
                     <td>Is Staff</td>
                     <!--<td>Halaman</td>
                     <td>Kategori</td>-->
-                    <td style="width:12%">Opsi</td>
+                    <td style="width:9%">Opsi</td>
                 </thead>
                 <tbody>
 
@@ -33,9 +32,9 @@
                     <td>{{a.email}}</td>
                     <td>{{a.is_staff}}</td>
                     <td>
-                      <a href="{% url 'lihat_buku' a.id %}" type="button" rel="tooltip" class="btn btn-success btn-icon btn-sm ">
+                      <!--<a href="{% url 'lihat_buku' a.id %}" type="button" rel="tooltip" class="btn btn-success btn-icon btn-sm ">
                         <i class="fa fa-eye"></i>
-                      </a>
+                      </a>-->
                       <a href="{% url 'edit_buku' a.id %}" type="button" rel="tooltip" class="btn btn-warning btn-icon btn-sm ">
                         <i class="fa fa-edit"></i>
                       </a>
