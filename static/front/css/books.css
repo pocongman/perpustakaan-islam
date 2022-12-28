@@ -56,7 +56,17 @@ a {
 }
 
 h1,
-h2,
+h2 {
+     letter-spacing: 0;
+     font-weight: normal;
+     position: relative;
+     padding: 0 0 10px 0;
+     font-weight: normal;
+     line-height: normal;
+     color: #fff;
+     margin: 0
+}
+
 h3,
 h4,
 h5 {
