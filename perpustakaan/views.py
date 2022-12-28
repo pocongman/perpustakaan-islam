@@ -36,6 +36,7 @@ def books(request) :
     data = book.json()  
     
     context ={
+        'title': 'Daftar Buku',
         "data" : data
     }
     

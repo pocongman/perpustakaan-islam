@@ -18,33 +18,9 @@
 <hr>
 
 
-{% comment %}<div class="container">
-<div class="card-deck">
-  <div class="row">
-  {% for a in data %}
-  <div class="card">
-    <img class="card-img-top" src="{% static 'front/images/book1.jpg' %}" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">{{a.info.title}}</h5>
-      <p class="card-text">Penulis : {{a.info.author}}</p>
-      <p class="card-text">Tanggal Publish :{{a.info.publish}}</p>
-      <p class="card-text">Halaman : {{a.info.pages}}</p>
-      <p class="card-text">Source : <a href="{{a.info.source}}" target="_blank">Selengkapnya</a></p>
-      <p class="card-text">Deskripsi : {{a.info.desc}}</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">{{a.info.date}}</small>
-    </div>
-  </div>
-  {% endfor %} 
-</div>
-</div>
-</div>
-<br>{% endcomment %}
-
-
-<div class="container">
-<div class="card-group">
+  <div class="container col-md-9">
+  <div class="card-group">
+  <div class="row col-md-12">
   {% for a in data %}
   <div class="card" style="width: 18rem;">
     <img class="card-img-top" src="{% static 'front/images/book1.jpg' %}" alt="Card image cap">
@@ -53,14 +29,14 @@
       <p class="card-text">Penulis : {{a.info.author}}</p>
       <p class="card-text">Tanggal Publish :{{a.info.publish}}</p>
       <p class="card-text">Halaman : {{a.info.pages}}</p>
-      <p class="card-text">Source : <a href="{{a.info.source}}" target="_blank">Selengkapnya</a></p>
+      <p class="card-text">Source : {{a.info.source}}"</p>
       <div class="accordion" id="accordionExample">
         <div class="card">
           <div class="card-header" id="headingOne">
             <h2 class="">
               <button class="btn btn-link block text-left" type="button" data-toggle="collapse" data-target="#collapse-{{forloop.counter}}" aria-expanded="true" aria-controls="collapse-{{forloop.counter}}">
                 <div>
-                Selengkapnya...
+                Deskripsi
                 </div>
               </button>
             </h2>
@@ -77,7 +53,8 @@
   {% endfor %}
   </div>
 </div>
+</div>
 <br>
-  {% endblock content %}
+{% endblock content %}
 
 
